@@ -21,9 +21,8 @@ namespace PTest1022 {
             //６以上…「６以上です」
 
             /*** ●●● ここへ解答を入力 ●●● ***/
-            
 
-
+            outStr = inputNum <= 5 ? "5以下です" : inputNum.ToString(inputNum >= 6 ? "６以上です" : inputNum.ToString())  ;
 
 
             /*** ●●●●● ここまで ●●●●● ***/
@@ -40,10 +39,7 @@ namespace PTest1022 {
 
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
-
-
-
+            data = Exam_2_Stab() ?? -1;
 
             /*** ●●●●● ここまで ●●●●● ***/
             Console.WriteLine($"〇問題２：{data}\n");
@@ -70,8 +66,15 @@ namespace PTest1022 {
             //bookオブジェクトがnullの場合はそのままnullを返却すること
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
-
+            if (book == null)
+            {
+                return;
+            }
+            else
+            {
+                title = book.Title;
+            }
+            
 
 
             /*** ●●●●● ここまで ●●●●● ***/
@@ -87,10 +90,10 @@ namespace PTest1022 {
 
             //金額が1200円以上の書籍を抽出せよ
             //出力については「タイトル」と「金額」を出力すること
-            
+
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            //pageSum = books.FindAll(s => s.Price > 1200);
 
 
 
@@ -108,7 +111,7 @@ namespace PTest1022 {
 
             /*** ●●● ここへ解答を入力 ●●● ***/
 
-
+            //var nums = books.Find(s => s == "物語")
 
 
 
